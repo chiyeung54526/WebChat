@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cz2397.webchat.dao.LogMapper">
+<!--    <select id="insertlog"  resultMap="common.userResultMapper">-->
+<!--        SELECT * FROM sys_user WHERE username = #{username}-->
+<!--    </select>-->
+
+    <insert id="insertlog" parameterType="ChatLog">
+        INSERT INTO chatlog(`username`, `roomid`, `msgtype`, `message`) VALUES(#{username}, #{roomid}, #{msgtype}, #{message})
+    </insert>
+</mapper>
