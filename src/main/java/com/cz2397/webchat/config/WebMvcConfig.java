@@ -1,9 +1,12 @@
 package com.cz2397.webchat.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.system.ApplicationHome;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 /**
  * @Author: cailin
@@ -15,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     // ../resource/static/dist/img
-    private String imgPath = new ApplicationHome(getClass()).getSource().getParentFile().toString()+"/img/";
+    public String imgPath = new ApplicationHome(getClass()).getSource().getParentFile().toString()+"/img/";
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
